@@ -17,6 +17,8 @@ async function shortenUrl(url) {
   }
 }
 
+
+
 function activate(context) {
   // Watch for document changes
   let disposable = vscode.workspace.onDidChangeTextDocument(async (event) => {

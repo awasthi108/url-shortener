@@ -3,11 +3,25 @@
 //   "displayName": "Image URL Shortener",
 //   "description": "Automatically shortens image URLs in src attributes",
 //   "version": "0.0.1",
+//   "publisher": "ShushantAwasthi",
+//   "license": "MIT",
+//   "repository": {
+//     "type": "git",
+//     "url": ""
+//   },
 //   "engines": {
 //     "vscode": "^1.80.0"
 //   },
 //   "categories": [
-//     "Other"
+//     "Other",
+//     "Formatters"
+//   ],
+//   "keywords": [
+//     "image",
+//     "url",
+//     "shortener",
+//     "tinyurl",
+//     "src"
 //   ],
 //   "activationEvents": [
 //     "onLanguage:html",
@@ -43,14 +57,43 @@
 {
   "name": "image-url-shortener",
   "displayName": "Image URL Shortener",
-  "description": "Automatically shortens image URLs in src attributes",
+  "description": "Automatically shortens image URLs in src attributes using TinyURL service. Makes your code cleaner and more readable by converting long image URLs into short ones.",
   "version": "0.0.1",
+  "publisher": "ShushantAwasthi",
+  "author": {
+    "name": "Shushant Kumar Awasthi",
+    "email": "sushantawasthi000@gmail.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/awasthi108/url-shortener"
+  },
+  "bugs": {
+    "url": "https://github.com/awasthi108/url-shortener/issues"
+  },
+  "homepage": "https://github.com/awasthi108/url-shortener#readme",
   "engines": {
     "vscode": "^1.80.0"
   },
   "categories": [
+    "Formatters",
     "Other"
   ],
+  "keywords": [
+    "image",
+    "url",
+    "shortener",
+    "tinyurl",
+    "src",
+    "image-url",
+    "url-shortener"
+  ],
+  "galleryBanner": {
+    "color": "#C80000",
+    "theme": "dark"
+  },
+  "icon": "images/icon.png",
   "activationEvents": [
     "onLanguage:html",
     "onLanguage:javascript",
@@ -60,23 +103,23 @@
   ],
   "main": "./extension.js",
   "contributes": {
-    "commands": [
-      {
-        "command": "image-url-shortener.shortenImageUrl",
-        "title": "Shorten Image URL"
-      }
-    ]
+    "commands": [{
+      "command": "image-url-shortener.shortenImageUrl",
+      "title": "Shorten Image URL"
+    }]
   },
   "scripts": {
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
   },
   "devDependencies": {
-    "@types/node": "^20.4.5",
     "@types/vscode": "^1.80.0",
-    "eslint": "^8.45.0"
+    "@types/node": "^20.4.5",
+    "eslint": "^8.45.0",
+    "@vscode/test-electron": "^2.3.4"
   },
   "dependencies": {
-    "image-url-shortener": "file:",
     "node-fetch": "^2.6.12"
   }
 }
