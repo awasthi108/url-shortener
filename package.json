@@ -1,0 +1,82 @@
+// {
+//   "name": "image-url-shortener",
+//   "displayName": "Image URL Shortener",
+//   "description": "Automatically shortens image URLs in src attributes",
+//   "version": "0.0.1",
+//   "engines": {
+//     "vscode": "^1.80.0"
+//   },
+//   "categories": [
+//     "Other"
+//   ],
+//   "activationEvents": [
+//     "onLanguage:html",
+//     "onLanguage:javascript",
+//     "onLanguage:typescript",
+//     "onLanguage:javascriptreact",
+//     "onLanguage:typescriptreact"
+//   ],
+//   "main": "./extension.js",
+//   "contributes": {
+//     "commands": [
+//       {
+//         "command": "image-url-shortener.shortenImageUrl",
+//         "title": "Shorten Image URL"
+//       }
+//     ]
+//   },
+//   "scripts": {
+//     "lint": "eslint ."
+//   },
+//   "devDependencies": {
+//     "@types/node": "^20.4.5",
+//     "@types/vscode": "^1.80.0",
+//     "eslint": "^8.45.0"
+//   },
+//   "dependencies": {
+//     "image-url-shortener": "file:",
+//     "node-fetch": "^2.6.12"
+//   }
+// }
+
+
+{
+  "name": "image-url-shortener",
+  "displayName": "Image URL Shortener",
+  "description": "Automatically shortens image URLs in src attributes",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:html",
+    "onLanguage:javascript",
+    "onLanguage:typescript",
+    "onLanguage:javascriptreact",
+    "onLanguage:typescriptreact"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "image-url-shortener.shortenImageUrl",
+        "title": "Shorten Image URL"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.5",
+    "@types/vscode": "^1.80.0",
+    "eslint": "^8.45.0"
+  },
+  "dependencies": {
+    "image-url-shortener": "file:",
+    "node-fetch": "^2.6.12"
+  }
+}
